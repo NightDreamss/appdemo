@@ -10,10 +10,12 @@ const handler = async (req, res) => {
       const verify = await signupSchema.parse({
         name,
         email,
+        confirmEmail: email,
         phone,
         question,
         answer,
         password,
+        confirmPassword: password,
       });
 
       try {

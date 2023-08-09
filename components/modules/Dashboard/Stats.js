@@ -43,7 +43,7 @@ const Stats = ({ countOrders, countCustomers, orders, complete }) => {
             >
               <dt>
                 <div className="absolute rounded-md bg-indigo-500 p-3">
-                  {item?.customerCount ? (
+                  {item?.customerCount >= 0 ? (
                     <UsersIcon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -66,7 +66,7 @@ const Stats = ({ countOrders, countCustomers, orders, complete }) => {
                   ) : null}
                 </div>
                 <p className="ml-16 truncate text-sm font-medium text-gray-500">
-                  {item?.customerCount
+                  {item?.customerCount >= 0
                     ? "Customers"
                     : item?.ordersCount
                     ? "Total Orders"
